@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+  <style>
+    h1{color:red;}
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+ 
+</head>
+<body>
+
+  <h1>Hello World!</h1>
+  <button id="btn_01" type="button">색</button>
+  <button id="btn_02" type="button">크기</button>
+  <button id="btn_03" type="button">감추기</button>
+  <button id="btn_04" type="button">보이기</button>
+</body>
+<script>
+  $('#btn_01').click(function(){
+    $('h1').css('color','green');
+  });
+
+  $('#btn_02').click(function(){
+    $('h1').css('font-size','50px');
+  });
+
+  $('#btn_03').click(function(){
+    $('h1').css('visibility','hidden');
+  });
+
+  $('#btn_04').click(function(){
+    $('h1').css('visibility','visible');
+  });
+</script>
+</html>

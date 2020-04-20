@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자2</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#me').next().css('color','green');
+      $('#list01').nextAll().css('color','red');
+      $('#list03').prevAll().css('color','blue');
+      $('#list01').nextUntil('#list03').css('color','cyan');
+    });
+  </script>
+</head>
+<body>
+  <h1>관계(간접,탐색)선택자</h1>
+  <div class="wrap">
+    <ul>
+      <li id="list01">리스트1
+        <ul>
+          <li id="me" style="color:red;">리스트1-1</li>
+          <li>리스트1-2</li>
+        </ul>
+      </li>
+      <li>리스트2</li>
+      <li id="list03">리스트3</li>
+    </ul>
+  </div>
+</body>
+</html>

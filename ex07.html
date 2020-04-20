@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐색선택자03</title>
+  <!-- <script src="js/jquery-3.5.0.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $('#mo01').find('a').css('color','red');
+      $('#mo01').find('span').css('color','blue');
+
+      $('#mo02').find('p').filter('#p2').css('color','blue');
+
+      $('#mo03').children().not('#p2').css('border','1px solid green');
+      
+      $('#mo04').children().has('li').css('background','yellow');
+
+      // $('#mo05').children().eq(0).css('color','red');
+      $('#mo05').children().eq(5).prevAll().hide().show().hide();
+    });
+  </script>
+</head>
+<body>
+  <!-- <div id="mo01">
+    <p>1</p>
+    <a href="#">2</a>
+    <p>3</p>
+    <a href="#">4</a>
+    <span>5</span>
+  </div> -->
+  <!-- <div id="mo02">
+    <p>1</p>
+    <p id="p2">2</p>
+    <p>3</p>
+    <sanp>4</sanp>
+    <sanp>5</sanp>
+    <sanp>6</sanp>
+  </div> -->
+  <!-- <div id="mo03">
+    <p>1</p>
+    <p id="p2">2</p>
+    <p>3</p>
+    <sanp>4</sanp>
+    <sanp>5</sanp>
+    <sanp>6</sanp>
+  </div> -->
+  <!-- <div id="mo04">
+    <div>
+      <p>1</p>
+      <span>2</span>
+      <div>3</div>
+    </div>
+    <div>
+      <p>4</p>
+      <div>5</div>
+      <li>6</li>
+    </div>
+  </div> -->
+  <ul id="mo05">
+    <li>영</li>
+    <li>일</li>
+    <li>이</li>
+    <li>삼</li>
+    <li>사</li>
+    <li>오</li>
+    <li>육</li>
+    <li>칠</li>
+    <li>팔</li>
+    <li>구</li>
+  </ul>
+</body>
+</html>

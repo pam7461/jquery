@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>is()</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#btn').click(function(){
+        var tmp=$('#man').is(':checked');
+        var sex;
+        if(tmp){sex='남';}else{sex='여';}
+        $('#message').text(sex + '성을 선택하셨군요');
+      });
+    })
+  </script>
+  <style>
+    #message{margin:20px auto;border:1px solid black;padding:20px;}
+  </style>
+</head>
+<body>
+  <form>
+    <input type="radio" name="sex" id="man">
+    <label for="man">남성</label>
+    <input type="radio" name="sex" id="girl" checked>
+    <label for="girl">여성</label>
+
+    <input type="button" value="판정" id="btn">
+    <div id="message">
+      
+    </div>
+  </form>
+</body>
+</html>

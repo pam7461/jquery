@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>focus / blur / focusin /focusout/change</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#focus').focus(function(){
+        $(this).prev().css('color','red');
+      });
+
+      $('#focus').change(function(){
+        $(this).prev().text('바뀜');
+      });
+
+      $('#blur').blur(function(){
+        $(this).prev().css('color','green');
+      });
+
+      $('#blur').blur(function(){
+        $(this).prev().css('color','green');
+      });
+      
+      $('#focusin').focusin(function(){
+        $(this).prev().css('color','blue');
+      });
+      $('#focusout').focusout(function(){
+        $(this).prev().css('color','cyan');
+      });
+    })
+  </script>
+  <style>
+    h2{text-align:center}
+    input{display:block;width:100px;height:100px;margin:0 auto;border:1px solid black;}
+  </style>
+</head>
+<body>
+  <h2>focus</h2>
+  <input type="text" id="focus">
+  <h2>blur</h2>
+  <input type="text" id="blur">
+  <h2>focusin</h2>
+  <input type="text" id="focusin">
+  <h2>focusout</h2>
+  <input type="text" id="focusout">
+</body>
+</html>

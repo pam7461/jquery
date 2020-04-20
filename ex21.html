@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개체요소삽입/삭제</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('li').eq(1).before('<li>리스트2</li>');
+      $('li:last-child').after('<li>리스트5</li>');
+      $('li:first-child').append('<span>요소</span>');
+      $('li:last-child').prepend('<span>요소</span>');
+      $('li').eq(2).remove();
+      $('li:last-child').replaceWith('<h1>마지막리스트</h1>');
+      $('h1').empty();
+      $('li:first-child').unwrap();
+      $('li:first-child').wrap('<ul>');
+      $('body').children().wrapAll('<div class="wrap">');
+    })
+  </script>
+</head>
+<body>
+  <ul class="wrap">
+    <li>리스트1</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+  </ul>
+</body>
+</html>

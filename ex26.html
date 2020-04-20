@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보이기 / 감추기</title>
+  <style>
+    
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#fade_out').click(function(){
+        $('div').fadeOut(3000);
+      });
+      $('#fade_in').click(function(){
+        $('div').fadeIn(3000);
+      });
+      $('#fade_toggle').click(function(){
+        $('div').fadeToggle(3000);
+      });
+      $('#fade_to').click(function(){
+        $('div').fadeTo(3000,0.5);
+      });
+      $('#fade_to2').click(function(){
+        $('div').fadeTo(3000,1);
+      });
+    })
+  </script>
+</head>
+<body>
+  <input type="button" value="감추기" id="fade_out">
+  <input type="button" value="보이기" id="fade_in">
+  <input type="button" value="보이기/감추기" id="fade_toggle">
+  <input type="button" value="반투명" id="fade_to">
+  <input type="button" value="원래대로" id="fade_to2">
+  <div class='active'>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed placeat aliquam explicabo enim, vitae aperiam ullam suscipit laboriosam? Similique expedita suscipit eveniet quos illum beatae commodi dolorum cum veniam nesciunt.
+  </div>
+
+</body>
+</html>

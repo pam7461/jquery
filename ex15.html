@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prop()</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#btn').click(function(){
+        var chk01=$('#chk01').prop('checked');
+        var chk02=$('#chk02').prop('checked');
+        var chk03=$('#chk03').prop('checked');
+
+        var select=$('#select').prop('selectedIndex');
+        
+        console.log(chk01);
+        console.log(chk02);
+        console.log(chk03);
+        console.log(select);
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="checkbox" id="chk01" checked>
+  <label for="chk01">영화</label>
+  <input type="checkbox" id="chk02">
+  <label for="chk02">음악</label>
+  <input type="checkbox" id="chk03">
+  <label for="chk03">여행</label>
+  <br>
+  <select name="select" id="select">
+    <option value="option01">옵션1</option>
+    <option value="option02" selected>옵션2</option>
+    <option value="option03">옵션3</option>
+  </select>
+  <input type="button" value="조회" id="btn">
+</body>
+</html>

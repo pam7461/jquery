@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>키보드 이벤트</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $(document).keydown(function(e){
+        var keyNum=e.keyCode;
+        console.log(keyNum);
+        if(keyNum==21){
+          $('#id').val('한영키 누름');
+        }else if(keyNum==25){
+          $('#id').val('한자키 누름');
+        }
+      });
+    })
+  </script>
+</head>
+<body>
+  <label for="id">아이디</label>
+  <input type="text" id="id">
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보</title>
+  <style>
+    img{width:300px;}
+    input{width:100px;padding:20px;font-size:30px;}
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#btn01').click(function(){
+        // $('img').attr('src','images/img01.png').attr('alt','image01');
+        $('img').show().attr({
+          'src':'images/img01.png',
+          'alt':'image01'
+        });
+      });
+      $('#btn02').click(function(){
+        $('img').show().attr({
+          'src':'images/img02.jpg',
+          'alt':'image02'
+        });
+      });
+      $('#btn03').click(function(){
+        $('img').show().attr({
+          'src':'images/img03.jpg',
+          'alt':'image03'
+        });
+      });
+      $('#btn04').click(function(){
+        $('img').hide();
+      });
+    })
+  </script>
+</head>
+<body>
+  <h1>가위바위보</h1>
+  <img src="images/img01.png" alt="image01">
+  <br>
+  <input type="button" id="btn01" value="가위">
+  <input type="button" id="btn02" value="바위">
+  <input type="button" id="btn03" value="보">
+  <input type="button" id="btn04" value="그림지우기">
+</body>
+</html>

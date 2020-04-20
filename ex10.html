@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute</title>
+  <style>
+    *{margin:0;border:none;padding:0;}
+    ul{list-style:none;display:flex;width:600px;margin:0 auto;border:1px solid black;padding:10px;justify-content:space-between;}
+    li{font-size:20px;}
+    li.clear_list{display:none;}
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('li').click(function(){
+        $(this).attr('class','clear_list');
+      })
+      $('input').click(function(){
+        $('li').removeAttr('id');
+      })
+
+      $('button').click(function(){
+        var tmp2=$('li[id]').attr('id');
+        $('#tmp').text(tmp2);
+      })
+    })
+  </script>
+</head>
+<body>
+  <ul>
+    <li>홈</li>
+    <li id="file">파일</li>
+    <li>편집</li>
+    <li>선택영역</li>
+    <li>옵션</li>
+  </ul>
+  <input type="button" value="초기화">
+  <button type="button">속성검색</button>
+  <div id="tmp">
+
+  </div>
+</body>
+</html>

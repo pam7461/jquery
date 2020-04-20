@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탐색(간접)선택자2</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#wrap').children().css('color','red');
+      $('#me').parent().parent().next().css('color','blue');
+      $('#me').parents('div').css('color','magenta');
+      $('#me').closest('div').css('color','black');
+      // $('#p2').nextAll().css('color','red');
+      // $('#p2').prevAll().css('color','red');
+      $('#p2').siblings('*').css('color','red');
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <p>대한민국</p>
+    <div>
+      <ul id="me">
+        <li>리스트1</li>
+        <li>리스트2</li>
+      </ul>
+    </div>
+    <address>서울시 관악구 신림동</address>
+  </div>
+  <div id="side">
+    <p>피01</p>
+    <span>스펜01</span>
+    <p id="p2">피02</p>
+    <span>스펜02</span>
+    <p>피03</p>
+    <span>스펜03</span>
+  </div>
+</body>
+</html>

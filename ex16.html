@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      // content-box-width
+      $('#btn01').click(function(){
+        var boxWidth=$('div').height();
+        $('#list01').text(boxWidth+'px');
+      })
+      // padding-box-width
+      $('#btn02').click(function(){
+        var boxWidth=$('div').innerHeight();
+        $('#list02').text(boxWidth+'px');
+      })
+      // border-box-width
+      $('#btn03').click(function(){
+        var boxWidth=$('div').outerHeight();
+        $('#list03').text(boxWidth+'px');
+      })
+
+      // 400px event
+      $('#btn04').click(function(){
+        $('div').height(400).css('line-height','400px');
+      })
+      // 600px event
+      $('#btn05').click(function(){
+        $('div').innerHeight(600);
+        var boxHeight=$('div').height();
+        $('div').css('line-height',boxHeight+'px');
+      })
+      // 800px event
+      $('#btn06').click(function(){
+        $('div').outerHeight(800).css('line-height','800px');
+        var boxHeight=$('div').height();
+        $('div').css('line-height',boxHeight+'px');
+      })
+    })
+  </script>
+  <style>
+    h1{text-align:center;}
+    div{
+      width:50%;
+      height:200px;
+      margin:30px auto;
+      border:30px solid red;
+      padding:30px;
+      background-color:green;
+      background-clip:content-box;
+      text-align:center;
+      line-height:200px;
+      font-size:50px;
+    }
+    p{text-align:center;}
+    button{padding:10px 20px;font-size:30px;}
+    ul{width:600px;margin:0 auto;font-size:30px;}
+  </style>
+</head>
+<body>
+  <h1>BOX</h1>
+  <div>박스</div>
+  <p>
+    <button type="button" id="btn01">박스너비1</button>
+    <button type="button" id="btn02">박스너비2</button>
+    <button type="button" id="btn03">박스너비3</button>
+  </p>
+  <p>
+    <button type="button" id="btn04">400px</button>
+    <button type="button" id="btn05">600px</button>
+    <button type="button" id="btn06">800px</button>
+  </p>
+  <ul>
+    <li id="list01"></li>
+    <li id="list02"></li>
+    <li id="list03"></li>
+  </ul>
+</body>
+</html>

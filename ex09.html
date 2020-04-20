@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html/text메서드</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var tmp=$('#sec01>p').html();
+      console.log(tmp);
+      var tmp2=$('#sec02>p').text();
+      console.log(tmp2);
+
+      $('#btn01').click(function(){
+        $('#sec01>h2').text('에이치티엠엘');
+      });
+
+      $('#btn02').click(function(){
+        $('#sec02>h2').html('<a href="https://www.naver.com">NAVER</a>');
+      });
+    });
+  </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <section id="sec01">
+      <h2>html()</h2>
+      <p>
+        <span>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ab corrupti labore similique quam alias facere tempore minima temporibus illo nostrum optio nemo voluptas, quibusdam ut minus. Velit, dolore inventore?
+        </span>
+      </p>
+    </section>
+    <section id="sec02">
+      <h2>text()</h2>
+      <p>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestias vero unde, facilis fugit tenetur blanditiis quisquam est eum nemo eius, libero similique cum architecto harum asperiores nulla vitae quibusdam?
+        </span>
+      </p>
+    </section>
+    <input type="button" id="btn01" value="제목변경">
+    <input type="button" id="btn02" value="하이퍼링크">
+</body>
+</html>

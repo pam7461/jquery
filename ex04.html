@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('*').css('color','red');
+      $('#dir_sec').css('border','1px solid black');
+      $('.sec').css('border','2px solid red');
+      $('h1,h2,h3').css('color','green');
+      $('body>ul>li>ul>li').css('color','blue');
+      $('ul li').css('font-weight','bolder');
+      $('body>ul>li:nth-child(2)').hide();
+
+    });
+  </script>
+</head>
+<body>
+  <h1 id="tit">제이쿼리</h1>
+  <h2 class="sec">선택자</h2>
+  <h3 class="sec" id="dir_sec">직접선택자</h3>
+  <ul>
+    <li>1
+      <ul>
+        <li>1-1</li>
+        <li>1-2</li>
+      </ul>
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <div>
+    <li>독립</li>
+  </div>
+</body>
+
+</html>

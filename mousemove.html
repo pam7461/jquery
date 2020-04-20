@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스 이동 이벤트</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var div=$('div');
+      $(document).mousemove(function(event){
+        var x=event.pageX;
+        if(x>=0 && x<=299){
+          div.css('background','red');
+        }else if(x>=300 && x<=699){
+          div.css('background','green');
+        }else{
+          div.css('background','blue');
+        }
+
+      });
+    })
+  </script>
+  <style>
+    h1{text-align:center;}
+    /* p{text-align:center;font-size:24px;} */
+    div{width:300px;height:300px;margin:0 auto;border:1px solid black;background:red;transition:1s;}
+  </style>
+</head>
+<body>
+  <h1>Mouse Move Event</h1>
+  <!-- <p>X:<span id="moveX">0</span>px</p>
+  <p>Y:<span id="moveY">0</span>px</p> -->
+  <div></div>
+</body>
+</html>

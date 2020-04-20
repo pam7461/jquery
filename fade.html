@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 슬라이드</title>
+  
+  <style>
+    .wrap{
+      position:relative;
+      width:90%;
+      height:200px;
+      margin:0 auto;
+      overflow:hidden;
+    }
+    .wrap img{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:100%;
+    }
+    .wrap>p{
+      position:absolute;
+      left:50%;
+      bottom:10%;
+      transform:translateX(-50%);
+      text-align:center;
+    }
+    .wrap>p>span{
+      display:inline-block;
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:gray;
+      text-indent:-99999px;
+      cursor:pointer;
+    }
+    .wrap>p>span:hover{background:#333;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="images/img01.png" alt="img01" id="img01">
+    <img src="images/img02.jpg" alt="img02" id="img02">
+    <img src="images/img03.jpg" alt="img03" id="img03">
+    <p>
+      <span id="btn01">1</span>
+      <span id="btn02">2</span>
+      <span id="btn03">3</span>
+    </p>
+  </div>
+</body>
+</html>

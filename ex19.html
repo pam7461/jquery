@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css()</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      
+      $('div').css('width',function(index){
+        return (index+1)*100+'px';
+      });
+
+    })
+  </script>
+  <style>
+    *{margin:0;border:none;padding:0}
+    div{font-size:30px;padding:10px;}
+    div:nth-child(1){background-color:red;}
+    div:nth-child(2){background-color:green;}
+    div:nth-child(3){background-color:blue;}
+    div:nth-child(4){background-color:red;}
+    div:nth-child(5){background-color:green;}
+    div:nth-child(6){background-color:blue;}
+    div:nth-child(7){background-color:red;}
+    div:nth-child(8){background-color:green;}
+    div:nth-child(9){background-color:blue;}
+    div:nth-child(10){background-color:red;}
+  </style>
+</head>
+<body>
+  <div>box01</div>
+  <div>box02</div>
+  <div>box03</div>
+  <div>box04</div>
+  <div>box05</div>
+  <div>box06</div>
+  <div>box07</div>
+  <div>box08</div>
+  <div>box09</div>
+  <div>box10</div>
+</body>
+</html>

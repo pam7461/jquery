@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>워드프로세서</title>
+  <style>
+    #text{font-size:14px;font-family:'궁서';color:black;}
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var inputTxt=$('#text');
+      var fontSize=14;
+      $('.btn_group>input').click(function(){
+        if($(this).hasClass('zoomin')){
+          if(fontSize<50){
+            fontSize+=2;
+          }
+        }else if($(this).hasClass('zoomout')){
+          if(fontSize>6){
+            fontSize-=2;
+          }
+        }else{
+          fontSize=14;
+        }
+        inputTxt.css('font-size',fontSize+'px');
+
+      });
+    })
+  </script>
+</head>
+<body>
+  <h1>내가만든 워드프로세서</h1>
+  <div class="btn_group">
+    <input type="button" value="확대" class="zoomin">
+    <input type="button" value="축소" class="zoomout">
+    <input type="button" value="원래크기로" class="original">
+  </div>
+  <div class="txt_group">
+    <input type="text" id="text" size="120">
+  </div>
+</body>
+</html>

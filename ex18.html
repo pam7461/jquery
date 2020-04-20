@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{width:5000px;height:10000px;}
+    p{width:100px;height:100px;margin:100px;background:red;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      var docTop=$('p').offset().top;
+      var docLeft=$('p').offset().left;
+      $(window).scrollTop(100);
+      $(window).scrollLeft(500);
+    })
+  </script>
+</head>
+<body>
+
+  <div>
+    <p>
+
+    </p>
+  </div>
+
+</body>
+</html>

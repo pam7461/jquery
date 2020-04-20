@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보이기 / 감추기</title>
+  <style>
+    
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#hide').click(function(){
+        $('div').hide();
+      });
+      $('#show').click(function(){
+        $('div').show();
+      });
+      $('#show_hide').click(function(){
+        $('div').toggle();
+      });
+    })
+  </script>
+</head>
+<body>
+  <input type="button" value="감추기" id="hide">
+  <input type="button" value="보이기" id="show">
+  <input type="button" value="보이기/감추기" id="show_hide">
+  <div class='active'>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed placeat aliquam explicabo enim, vitae aperiam ullam suscipit laboriosam? Similique expedita suscipit eveniet quos illum beatae commodi dolorum cum veniam nesciunt.
+  </div>
+
+</body>
+</html>

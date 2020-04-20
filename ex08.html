@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>each메서드</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      // $('input').click(function(){
+      //   var city=['서울','인천','대전','광주','대구','울산','부산'];
+      //   $.each(city,function(index,value){
+      //     console.log(index);
+      //     console.log(value);
+      //   });
+      // });
+
+      // $('button').click(function(){
+      //   var city02={
+      //     first_city:'서울',
+      //     no2:'인천',
+      //     no3:'대전',
+      //     no4:'광주',
+      //     black_city:'대구',
+      //     no6:'울산',
+      //     white_city:'부산'
+      //   };
+      //   $.each(city02,function(key,value){
+      //     console.log(key);
+      //     console.log(value);
+      //   });
+        
+      // });
+      $('div').map(function(index,value){
+        console.log(value);
+      });
+      
+    });
+  </script>
+</head>
+<body>
+  <div id="city01">서울</div>
+  <div id="city02">인천</div>
+  <div id="city03">대전</div>
+  <div id="city02">광주</div>
+  <div id="city05">대구</div>
+  <div id="city06">울산</div>
+  <div id="city07">부산</div>
+</body>
+</html>
