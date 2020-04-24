@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부드러운 스크롤</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/smooth-scrollbar.js"></script>
+  <script src="js/jquery.smooth-scroll.js"></script>
+
+  <script>
+    $(function(){
+      // var aTag=$('.wrap>div>a');
+      $('body').smoothScroll({
+        delegateSelector:'.wrap a',
+        speed:500,
+        easing:'swing'
+      });
+      
+
+      var Scrollbar = window.Scrollbar;
+      Scrollbar.init(document.querySelector('#my-scrollbar'), {
+        damping:0.1,
+        thumbMinSize:20
+      });
+    })
+  </script>
+  <style>
+    html{
+      
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="wrap" id="my-scrollbar">
+    <h1>Smooth-Scrolling</h1>
+    <div id="sec01">
+      <h2>Section01</h2>
+      <a href="#sec02">섹션02</a>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsam autem harum assumenda praesentium magni corrupti commodi tenetur voluptatibus expedita? Debitis ipsum doloremque quibusdam soluta aperiam illum sunt, vel natus.
+        Culpa maiores sequi dicta hic quidem obcaecati quo pariatur fugiat, neque deserunt similique magni sint labore quos quaerat vel unde voluptatem amet architecto eligendi voluptatibus! Illo minima nulla dolore eligendi.
+        Dolore nesciunt ut consequatur laboriosam accusantium fugiat veniam inventore quisquam sequi, impedit tempore sunt totam minus animi illo eos error nostrum voluptates unde odio vitae magni ad excepturi. Nihil, magni.
+        Hic, quas. Reprehenderit recusandae eligendi molestias praesentium aliquam error itaque culpa odit optio, enim cum quo. Optio esse quas quaerat adipisci corrupti, sit, soluta laborum architecto, ullam vero eaque temporibus?
+        Provident, magni nulla, quasi quo pariatur a autem dignissimos ab, rem nostrum quas corrupti facere saepe exercitationem beatae cumque eius? Cum voluptatum voluptate rem nisi quia, distinctio atque quisquam? Eum!
+        Quibusdam architecto facere excepturi ipsa commodi, qui a soluta accusantium? In facilis dolores temporibus. Doloribus labore nam magni nisi non quaerat eum at rerum pariatur eveniet. Voluptatem quae quo eum.
+        Neque facilis culpa nam magnam, ut iure natus nihil unde, impedit expedita velit quod, fugit ea? Omnis nesciunt enim, cumque reprehenderit eaque animi ut, blanditiis, saepe quasi aperiam fugit quidem?
+        Reiciendis laborum vero, illum voluptas culpa consectetur atque perferendis voluptatibus, maxime quae velit? Sapiente amet aut, consequuntur nesciunt mollitia quis, incidunt veniam, necessitatibus obcaecati facilis ipsum quibusdam aperiam! Pariatur, tempore.
+        Labore quae aut nemo tempore provident sequi minus eaque excepturi non omnis ratione consequuntur tempora, animi voluptate harum iusto cum sed quibusdam laudantium dolore! Ea beatae cupiditate consectetur dolorem doloremque!
+        Esse culpa praesentium aspernatur tenetur reprehenderit enim, eligendi facere ab nulla explicabo! Eum quia ipsam iure impedit repudiandae dignissimos inventore deserunt reprehenderit quaerat esse ea, numquam animi earum adipisci reiciendis!
+      </p>
+    </div>
+    <div id="sec02">
+      <h2>Section02</h2>
+      <a href="#sec03">섹션03</a>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsam autem harum assumenda praesentium magni corrupti commodi tenetur voluptatibus expedita? Debitis ipsum doloremque quibusdam soluta aperiam illum sunt, vel natus.
+        Culpa maiores sequi dicta hic quidem obcaecati quo pariatur fugiat, neque deserunt similique magni sint labore quos quaerat vel unde voluptatem amet architecto eligendi voluptatibus! Illo minima nulla dolore eligendi.
+        Dolore nesciunt ut consequatur laboriosam accusantium fugiat veniam inventore quisquam sequi, impedit tempore sunt totam minus animi illo eos error nostrum voluptates unde odio vitae magni ad excepturi. Nihil, magni.
+        Hic, quas. Reprehenderit recusandae eligendi molestias praesentium aliquam error itaque culpa odit optio, enim cum quo. Optio esse quas quaerat adipisci corrupti, sit, soluta laborum architecto, ullam vero eaque temporibus?
+        Provident, magni nulla, quasi quo pariatur a autem dignissimos ab, rem nostrum quas corrupti facere saepe exercitationem beatae cumque eius? Cum voluptatum voluptate rem nisi quia, distinctio atque quisquam? Eum!
+        Quibusdam architecto facere excepturi ipsa commodi, qui a soluta accusantium? In facilis dolores temporibus. Doloribus labore nam magni nisi non quaerat eum at rerum pariatur eveniet. Voluptatem quae quo eum.
+        Neque facilis culpa nam magnam, ut iure natus nihil unde, impedit expedita velit quod, fugit ea? Omnis nesciunt enim, cumque reprehenderit eaque animi ut, blanditiis, saepe quasi aperiam fugit quidem?
+        Reiciendis laborum vero, illum voluptas culpa consectetur atque perferendis voluptatibus, maxime quae velit? Sapiente amet aut, consequuntur nesciunt mollitia quis, incidunt veniam, necessitatibus obcaecati facilis ipsum quibusdam aperiam! Pariatur, tempore.
+        Labore quae aut nemo tempore provident sequi minus eaque excepturi non omnis ratione consequuntur tempora, animi voluptate harum iusto cum sed quibusdam laudantium dolore! Ea beatae cupiditate consectetur dolorem doloremque!
+        Esse culpa praesentium aspernatur tenetur reprehenderit enim, eligendi facere ab nulla explicabo! Eum quia ipsam iure impedit repudiandae dignissimos inventore deserunt reprehenderit quaerat esse ea, numquam animi earum adipisci reiciendis!
+      </p>
+    </div>
+    <div id="sec03">
+      <h2>Section03</h2>
+      <a href="#sec01">섹션01</a>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsam autem harum assumenda praesentium magni corrupti commodi tenetur voluptatibus expedita? Debitis ipsum doloremque quibusdam soluta aperiam illum sunt, vel natus.
+        Culpa maiores sequi dicta hic quidem obcaecati quo pariatur fugiat, neque deserunt similique magni sint labore quos quaerat vel unde voluptatem amet architecto eligendi voluptatibus! Illo minima nulla dolore eligendi.
+        Dolore nesciunt ut consequatur laboriosam accusantium fugiat veniam inventore quisquam sequi, impedit tempore sunt totam minus animi illo eos error nostrum voluptates unde odio vitae magni ad excepturi. Nihil, magni.
+        Hic, quas. Reprehenderit recusandae eligendi molestias praesentium aliquam error itaque culpa odit optio, enim cum quo. Optio esse quas quaerat adipisci corrupti, sit, soluta laborum architecto, ullam vero eaque temporibus?
+        Provident, magni nulla, quasi quo pariatur a autem dignissimos ab, rem nostrum quas corrupti facere saepe exercitationem beatae cumque eius? Cum voluptatum voluptate rem nisi quia, distinctio atque quisquam? Eum!
+        Quibusdam architecto facere excepturi ipsa commodi, qui a soluta accusantium? In facilis dolores temporibus. Doloribus labore nam magni nisi non quaerat eum at rerum pariatur eveniet. Voluptatem quae quo eum.
+        Neque facilis culpa nam magnam, ut iure natus nihil unde, impedit expedita velit quod, fugit ea? Omnis nesciunt enim, cumque reprehenderit eaque animi ut, blanditiis, saepe quasi aperiam fugit quidem?
+        Reiciendis laborum vero, illum voluptas culpa consectetur atque perferendis voluptatibus, maxime quae velit? Sapiente amet aut, consequuntur nesciunt mollitia quis, incidunt veniam, necessitatibus obcaecati facilis ipsum quibusdam aperiam! Pariatur, tempore.
+        Labore quae aut nemo tempore provident sequi minus eaque excepturi non omnis ratione consequuntur tempora, animi voluptate harum iusto cum sed quibusdam laudantium dolore! Ea beatae cupiditate consectetur dolorem doloremque!
+        Esse culpa praesentium aspernatur tenetur reprehenderit enim, eligendi facere ab nulla explicabo! Eum quia ipsam iure impedit repudiandae dignissimos inventore deserunt reprehenderit quaerat esse ea, numquam animi earum adipisci reiciendis!
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

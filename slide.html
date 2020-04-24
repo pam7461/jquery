@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slide</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      // $('#panel').slideUp(0);
+      $('#click_me').click(function(){
+        $('#panel').stop().slideToggle(1000);
+      });
+    })
+  </script>
+  <style>
+    div{
+      border:2px solid gray;
+      padding:20px;
+      background:lightblue;
+      text-align:center;
+      font-size:30px;
+      cursor:pointer;
+    }
+    #panel{
+      height:500px;
+    }
+  </style>
+</head>
+<body>
+  <div id="click_me">Click Me</div>
+  <div id="panel">Hello World!</div>
+</body>
+</html>

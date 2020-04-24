@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#btn').click(function(){
+        $('div').animate({
+          'margin-left':'250px',
+          'font-size':'30px',
+          'margin-top':'200px'
+        },1000);
+      });
+    })
+  </script>
+  <style>
+    input{
+      padding:10px 30px;
+      font-size:24px;
+    }
+    input:hover{
+      background:darkred;
+      color:white;
+    }
+    div{width:100px;height:100px;margin-top:50px;background:lightgreen;}
+  </style>
+</head>
+<body>
+  <input type="button" value="start animation" id="btn">
+  <div>글자</div>
+</body>
+</html>

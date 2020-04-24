@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script>
+    $(function(){
+
+    })
+  </script>
+  <style>
+    form{width:500px;margin:0 auto;border:1px solid black;}
+    h3{text-align:center;}
+    form>div{padding:10px;}
+    form>div>label{display:inline-block;width:100px;text-align:center;}
+    form>div>input{width:300px;}
+    form>div.btn_box{display:flex;justify-content:space-between;}
+
+  </style>
+</head>
+<body>
+  <form>
+    <h3>로그인</h3>
+    <div class="id_box">
+      <label for="userId">아이디</label>
+      <input type="text" id="userId">
+    </div>
+    <div class="pass_box">
+      <label for="userPass">패스워드</label>
+      <input type="password" id="userPass">
+    </div>
+    <div class="btn_box">
+      <input type="button" value="로그인" id="logIn">
+      <input type="button" value="취소" id="cancle">
+      <input type="button" value="쿠키삭제" id="remove">
+      <script>
+        $(function(){
+          $('#remove').click(function(){
+            $.removeCookie('id_save');
+          })
+
+          var sv_id=$.cookie('id_save');
+          $('#userId').val(sv_id);
+
+          $('#logIn').click(function(){
+            var userId=$('#userId').val();
+            var info=confirm('아이디를 저장할까요?');
+            if(info){
+              $.cookie('id_save',userId,{expires:10000,path:'/'});
+            }
+          })
+
+        })
+      </script>
+    </div>
+  </form>
+</body>
+</html>

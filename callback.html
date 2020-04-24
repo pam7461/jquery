@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallBack Function</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('input').click(function(){
+        $('div').stop().slideToggle(1000,function(){
+          alert('완료');
+        });
+      });
+    })
+  </script>
+  <style>
+    *{margin:10px;}
+    input{padding:10px 20px;font-size:20px;}
+    div{height:200px;background:red;}
+  </style>
+</head>
+<body>
+  <input type="button" value="click">
+  <div></div>
+</body>
+</html>

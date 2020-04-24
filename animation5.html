@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stop()</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var playBtn=$('#play01');
+      var stopBtn=$('#stop01');
+      var moveBox01=$('#box01');
+      var moveBox02=$('#box02');
+      var moveBox03=$('#box03');
+      var moveBox04=$('#box04');
+      playBtn.click(function(){
+        moveBox01.animate({left:'500px'},1000,'linear',function(){
+          moveBox02.animate({left:'500px'},1000,'linear',function(){
+            moveBox03.animate({left:'500px'},1000,'linear',function(){
+              moveBox04.animate({left:'500px'},1000,'linear');
+            });
+          });
+        });
+      });
+      stopBtn.click(function(){
+        // $('div').stop(false,false);
+        // $('div').stop(true,false);
+        // $('div').stop(false,true);
+        // $('div').stop(true,true);
+      });
+    })
+  </script>
+  <style>
+    *{margin:10px;}
+    input{padding:10px 20px;font-size:20px;}
+    div{
+      width:100px;
+      height:100px;
+      background:orange;
+      position:relative;
+    }
+  </style>
+</head>
+<body>
+  <input type="button" value="play" id="play01">
+  <input type="button" value="stop" id="stop01">
+  <div id="box01"></div>
+  <div id="box02"></div>
+  <div id="box03"></div>
+  <div id="box04"></div>
+</body>
+</html>

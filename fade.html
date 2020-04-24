@@ -7,23 +7,27 @@
   <script src="js/jquery-3.5.0.min.js"></script>
   <script>
     $(function(){
-      $('span').click(function(){
-        $('span').css('background','gray');
-        $(this).css('background','#333');
+      var span=$('span');
+      span.click(function(index){
+        console.log(span[index]);
       });
+      // $('span').click(function(){
+      //   $('span').css('background','gray');
+      //   $(this).css('background','#333');
+      // });
 
-      $('#btn01').click(function(){
-        $('img').fadeOut(1000);
-        $('#img01').fadeIn(1000);
-      });
-      $('#btn02').click(function(){
-        $('img').fadeOut(1000);
-        $('#img02').fadeIn(1000);
-      });
-      $('#btn03').click(function(){
-        $('img').fadeOut(1000);
-        $('#img03').fadeIn(1000);
-      });
+      // $('#btn01').click(function(){
+      //   $('img').fadeOut(1000);
+      //   $('#img01').fadeIn(1000);
+      // });
+      // $('#btn02').click(function(){
+      //   $('img').fadeOut(1000);
+      //   $('#img02').fadeIn(1000);
+      // });
+      // $('#btn03').click(function(){
+      //   $('img').fadeOut(1000);
+      //   $('#img03').fadeIn(1000);
+      // });
     })
   </script>
   <style>

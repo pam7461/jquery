@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addClass</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var setBtn=$('span');
+      var boxS=$('.container').children();
+      var clearBtn=$('input');
+      console.log(setBtn);
+      console.log(boxS);
+      setBtn.click(function(){
+        boxS.addClass(function(index){
+          return 'box0'+index;
+        });
+      });
+      clearBtn.click(function(){
+        boxS.removeClass(function(index){
+          if(index<2){
+            return 'box0'+index;
+          }
+        });
+      });
+    })
+  </script>
+  <style>
+    *{margin:0;}
+    h1{border-bottom:1px solid black;padding:10px;text-align:center;}
+    h1>span{display:inline-block;border:1px solid #666;padding:5px 10px;background:#ddd;font-weight:normal;font-size:16px;cursor: pointer;}
+    h1>span:hover{background:#666;color:#ddd;}
+    .container{padding:10px;text-align:center;}
+    .container>div{
+      display:inline-block;
+      width:200px;
+      height:200px;
+      border:1px solid black;
+      border-radius:50%;
+      line-height:200px;
+      font-size:30px;
+    }
+    .container>div.box00{
+      border-color:red;
+    }
+    .container>div.box01{
+      border-color:green;
+    }
+    .container>div.box02{
+      border-color:blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>addClass()<span>click</span></h1>
+  <div class="container">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>jQuery</div>
+  </div>
+  <input type="button" value="click">
+
+</body>
+</html>

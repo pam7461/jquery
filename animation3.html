@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('div').mouseenter(function(){
+        $(this).animate({
+          'margin-left':'1000px'
+        },3000).text('끝');
+      });
+      $('div').mouseleave(function(){
+        $(this).stop();
+      });
+    })
+  </script>
+
+  <style>
+    div{width:100px;margin:10px;border:1px solid black;padding:20px;}
+    div#box1{background:red;}
+    div#box2{background:green;}
+    div#box3{background:blue;}
+  </style>
+</head>
+<body>
+  <input type="button" value="시작" id="start">
+  <input type="button" value="멈춤" id="stop">
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+</body>
+</html>

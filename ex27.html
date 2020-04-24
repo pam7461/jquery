@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('input').click(function(){
+        $('.box1').load('data.txt');
+      });
+    })
+  </script>
+  <style>
+    .box1{
+      text-align:center;
+    }
+    input{position:relative;left:50%;transform:translateX(-50%);font-size:24px;}
+  </style>
+</head>
+<body>
+  <div class="box1"><h1>안녕하세요</h1></div>
+  <input type="button" value="click">
+</body>
+</html>

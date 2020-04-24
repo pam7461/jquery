@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var tmp;
+      function infiLoop(){
+        $('#box1').animate({
+          'margin-left':'1000px'
+        },1000).delay(2000).animate({
+          'margin-left':'0px'
+        },1000);
+        $('#box2').delay(1000).animate({
+          'margin-left':'1000px'
+        },1000).delay(2000).animate({
+          'margin-left':'0px'
+        },1000);
+        $('#box3').delay(2000).animate({
+          'margin-left':'1000px'
+        },1000).delay(2000).animate({
+          'margin-left':'0px'
+        },1000);
+      }
+      $('#start').click(function(){
+        infiLoop();
+        tmp=setInterval(infiLoop,6000);
+      });
+      $('#stop').click(function(){
+        $('div').stop();
+        clearInterval(tmp);
+       
+      });
+    })
+  </script>
+
+  <style>
+    div{width:100px;margin:10px;border:1px solid black;padding:20px;}
+    div#box1{background:red;}
+    div#box2{background:green;}
+    div#box3{background:blue;}
+  </style>
+</head>
+<body>
+  <input type="button" value="시작" id="start">
+  <input type="button" value="멈춤" id="stop">
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+</body>
+</html>

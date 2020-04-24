@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스오버</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      $('div').mouseenter(function(){
+        $('#span01').stop().animate({
+          'width':'100%'
+        },300);
+        $('#span02').stop().delay(300).animate({
+          'height':'100%'
+        },300);
+        $('#span03').stop().delay(600).animate({
+          'width':'100%'
+        },300);
+        $('#span04').stop().delay(900).animate({
+          'height':'100%'
+        },300);
+      });
+      
+    })
+  </script>
+  <style>
+    div{position:relative;width:600px;margin:0 auto;overflow:hidden;}
+    div>img{width:100%;vertical-align:top;transition:0.3s;}
+    div>img:hover{transform:scale(1.05);}
+    div>span{position:absolute;}
+    #span01{left:0;top:0;width:0;height:2px;background:red;}
+    #span02{right:0;top:0;width:2px;height:0;background:red;}
+    #span03{right:0;bottom:0;width:0;height:2px;background:red;}
+    #span04{left:0;bottom:0;width:2px;height:0;background:red;}
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/img02.jpg" alt="이미지">
+    <span id="span01"></span>
+    <span id="span02"></span>
+    <span id="span03"></span>
+    <span id="span04"></span>
+  </div>
+</body>
+</html>

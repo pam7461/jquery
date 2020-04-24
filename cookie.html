@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팝업</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <style>
+    body{margin:0;background:darkorange;}
+    
+    h1{text-align:center;}
+    .pop_up{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:300px;
+      box-shadow:0 0 2px #666;
+    }
+    .pop_up>img{width:100%;vertical-align:top;}
+    .pop_up>.close_line{
+      padding:10px;
+      background:white;
+      display:flex;
+      justify-content: flex-end;
+    }
+    #closeBtn{
+      margin-left:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>팝업</h1>
+    <div class="pop_up">
+      <img src="images/img02.jpg" alt="팝업이미지">
+      <div class="close_line">
+        <input type="checkbox" id="closeChk">
+        <label for="closeChk">오늘하루 열지 않음</label>
+        <input type="button" value="닫기" id="closeBtn">
+        <script>
+          $(function(){
+            $('#closeBtn').click(function(){
+              if($('#closeChk').is(':checked')){
+                $.cookie('homerun_ball','none',{expires:1,path:'/'});
+              }
+              $('.pop_up').hide();
+            })
+              if($.cookie('homerun_ball')=='none'){
+                $('.pop_up').hide();
+              }
+          })
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

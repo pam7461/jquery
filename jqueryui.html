@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQueryUI</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+  <script>
+    $( function() {
+      $( "#draggable" ).draggable();
+    } );
+    </script>
+    <style>
+      .wrap{width:80%;height:600px;margin:0 auto;border:1px solid black;overflow: hidden;}
+      #draggable{width:30%;}
+      img{width:100%;}
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="draggable" class="ui-widget-content">
+      <img src="images/img01.png" alt="이미지">
+    </div>
+  </div>
+</body>
+</html>

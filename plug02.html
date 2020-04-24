@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper slider</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <style>
+    .swiper-container{width:600px;height:300px;}
+  </style>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function () {
+      //initialize swiper when document ready
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+    });
+  </script>
+</head>
+<body>
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="images/img01.png" alt="이미지1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img02.jpg" alt="이미지2">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img03.jpg" alt="이미지3">
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</body>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+</html>

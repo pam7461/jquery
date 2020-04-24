@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script>
+    $(function(){
+      var timing;
+
+      function animation(){
+        $('div').animate({'margin-left':'300px'},1000).animate({'margin-top':'350px'},1000).animate({'margin-left':'0px'},1000).animate({'margin-top':'50px'},1000);
+      }
+      $('#btn02').click(function(){
+        clearInterval(timing);
+      });
+      $('#btn').click(function(){
+        animation();
+        timing=setInterval(function(){
+          animation();
+        },4000);
+      });
+    })
+  </script>
+  <style>
+    input{
+      padding:10px 30px;
+      font-size:24px;
+    }
+    input:hover{
+      background:darkred;
+      color:white;
+    }
+    div{width:100px;height:100px;margin-top:50px;background:lightgreen;}
+  </style>
+</head>
+<body>
+  <input type="button" value="start animation" id="btn">
+  <input type="button" value="stop animation" id="btn02">
+
+  <div></div>
+</body>
+</html>
