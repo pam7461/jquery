@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자2</title>
+</head>
+<body>
+    <h1 class="tit" id="tit">선택자2</h1>
+    <nav>
+        <ul>
+            <li>1</li>
+            <li class="list list02" id="list02">2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </nav>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        console.log($(window));
+        console.log($(location));
+        console.log($(history));
+        console.log($(document));
+        console.log($('h1'));
+        console.log($('.tit'));
+        console.log($('#tit'));
+        console.log($('nav>ul>li.list'));
+        console.log($('nav>ul>li.list+li'));
+        console.log($('nav>ul>li:nth-child(2)'));
+
+        console.log($('#list02').parent());
+        console.log($('#list02').parent().parent());
+        console.log($('#list02').parents());
+        console.log($('nav').children());
+        console.log($('nav').children().children());
+        console.log($('.list02').next());
+        console.log($('.list02').next().next());
+        console.log($('.list02').nextAll());
+        console.log($('li:nth-child(3)').prev());
+        console.log($('li:nth-child(3)').prev().prev());
+        console.log($('li:nth-child(3)').prev().prev().prev());
+        console.log($('li:last-child').prevAll());
+        console.log($('.list02').siblings());
+        
+        
+        // 인덱스번호 선택자
+        console.log($('li').eq(4));
+        console.log($('li').slice(2,4));
+
+
+
+    </script>
+</body>
+</html>
