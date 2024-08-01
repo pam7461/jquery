@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery01</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        button,input{
+            display:block;
+            margin:20px auto;
+            padding:10px;
+            font-size:2em;
+        }
+        .box{
+            width:500px;
+            height:500px;
+            margin:0 auto;
+            background:black;
+            transition:height 0.3s;
+        }
+        .box02{
+            width:500px;
+            height:500px;
+            margin:0 auto;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <h2>SELECTOR</h2>
+    <button>Click</button>
+    <div class="box"></div>
+
+    <input type="button" value="Click">
+    <div class="box02"></div>
+
+
+
+
+
+
+
+    <!-- Vanilla JS -->
+    <script>
+        let h1El = document.querySelector('h1');
+        h1El.style.fontSize = '4em';
+        h1El.style.color = '#f00';
+        h1El.style.textAlign = 'center';
+
+        h1El.onclick = function(){
+            h1El.style.fontSize = '3em';
+            h1El.style.color = '#0f0';
+        }
+
+        let btn = document.querySelector('button');
+        let box = document.querySelector('.box');
+        btn.onclick = function(){
+            box.style.height = '0';
+        }
+
+    </script>
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $('h2').css('font-size','4em');
+        $('h2').css('color','#f00');
+        $('h2').css('text-align','center');
+        $('h2').click(function(){
+            $('h2').css('font-size','3em');
+            $('h2').css('color','#0f0');
+        });
+
+        $('input').click(function(){
+            $('.box02').slideToggle(300);
+        });
+    </script>
+</body>
+</html>
