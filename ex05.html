@@ -13,6 +13,16 @@
         .btn{
             font-size:2em;
         }
+
+        .box02{
+            height:500px;
+            transition:0.3s;
+        }
+        .box02.hide{
+            height:0px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -22,21 +32,92 @@
     <button class="btn btn01">Hide</button>
     <button class="btn btn02">Show</button>
     <button class="btn btn03">Toggle</button>
+
+    <h2>hide2/show2/toggle2</h2>
+    <div class="box box02"></div>
+    <button class="btn btn04">Hide2</button>
+    <button class="btn btn05">Show2</button>
+    <button class="btn btn06">Toggle2</button>
+
+    <h2>hide3/show3/toggle3</h2>
+    <div class="box box03"></div>
+    <button class="btn btn07">Hide3</button>
+    <button class="btn btn08">Show3</button>
+    <button class="btn btn09">Toggle3</button>
+
+
+    <h2>slideUp/slideDown/slideToggle</h2>
+    <div class="box box04"></div>
+    <button class="btn btn10">slideUp</button>
+    <button class="btn btn11">slideDown</button>
+    <button class="btn btn12">slideToggle</button>
+
+    <h2>fadeOut/fadeIn/fadeToggle</h2>
+    <div class="box box05"></div>
+    <button class="btn btn13">fadeOut</button>
+    <button class="btn btn14">fadeIn</button>
+    <button class="btn btn15">fadeToggle</button>
+
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script>
+        let boxHeight = $('.box01').css('height');
+        $('.box01').css('transition','0.3s');
         $('.btn01').click(function(){
-            $('.box01').css('display','none');
+            $('.box01').css('height','0px');
         });
         $('.btn02').click(function(){
-            $('.box01').css('display','block');
+            $('.box01').css('height',boxHeight);
         });
         $('.btn03').click(function(){
-            if($('.box01').css('display') == 'none'){
-                $('.box01').css('display','block');
+            if($('.box01').css('height') == '0px'){
+                $('.box01').css('height',boxHeight);
             }else{
-                $('.box01').css('display','none');
+                $('.box01').css('height','0px');
             }                
         });
+    
+        
+        $('.btn04').click(function(){
+            $('.box02').addClass('hide');
+        });
+        $('.btn05').click(function(){
+            $('.box02').removeClass('hide');
+        });
+        $('.btn06').click(function(){
+            $('.box02').toggleClass('hide');
+        });
+    
+    
+        $('.btn07').click(function(){
+            $('.box03').hide(300);
+        });
+        $('.btn08').click(function(){
+            $('.box03').show(300);
+        });
+        $('.btn09').click(function(){
+            $('.box03').toggle(300);
+        });
+
+        $('.btn10').click(function(){
+            $('.box04').slideUp(300);
+        });
+        $('.btn11').click(function(){
+            $('.box04').slideDown(300);
+        });
+        $('.btn12').click(function(){
+            $('.box04').slideToggle(300);
+        });
+    
+        $('.btn13').click(function(){
+            $('.box05').fadeOut(300);
+        });
+        $('.btn14').click(function(){
+            $('.box05').fadeIn(300);
+        });
+        $('.btn15').click(function(){
+            $('.box05').fadeToggle(300);
+        });
+    
     </script>
 </body>
 </html>
