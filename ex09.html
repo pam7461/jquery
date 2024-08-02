@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event </title>    
+    <!-- 외부스타일 -->
+
+    <!-- 외부스크립트 -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn01').click(function(){
+                $(this).hide();
+            })
+        })
+    </script>
+
+    <!-- 내부 스타일 -->
+     <style>
+        body{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows:repeat(5,100px);
+            gap:100px;
+            padding:100px;
+        }
+        button{            
+            font-size:3em;
+        }
+     </style>
+</head>
+<body>
+    <button class="btn btn01">click()</button>
+    <button class="btn btn02"></button>
+    <button class="btn btn03"></button>
+    <button class="btn btn04"></button>
+    <button class="btn btn05"></button>
+    <button class="btn btn06"></button>
+    <button class="btn btn07"></button>
+    <button class="btn btn08"></button>
+    <button class="btn btn09"></button>
+    <button class="btn btn010"></button>
+    <button class="btn btn11"></button>
+    <button class="btn btn12"></button>
+    <button class="btn btn13"></button>
+    <button class="btn btn14"></button>
+    <button class="btn btn15"></button>
+    <button class="btn btn16"></button>
+    <button class="btn btn17"></button>
+    <button class="btn btn18"></button>
+    <button class="btn btn19"></button>
+    <button class="btn btn20"></button>
+</body>
+</html>

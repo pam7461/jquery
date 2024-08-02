@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트(Event)</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){           
+            $('.in01').keydown(function(e){
+                alert(e.keyCode);
+            })
+            $('.in02').keyup(function(e){
+                alert(e.keyCode);
+            })
+            $('.in03').keypress(function(e){
+                alert(e.keyCode);
+            })
+        
+            $('.in04').focus(function(){
+                alert('focus');
+            })
+            $('.in05').blur(function(){
+                alert('blur');
+            })
+            $('.in06').change(function(){
+                alert('change');
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Event01</h1>
+    <h2>Keyboard Event</h2>
+    <ul>
+        <li>keypress()</li>
+        <li>keyup()</li>
+        <li>keydown()</li>
+    </ul>
+    <h2>Focus Event</h2>
+    <ul>
+        <li>focus()</li>
+        <li>blur()</li>
+        <li>change()</li>
+    </ul>
+    <input type="text" class="in01" placeholder="in01">
+    <br>
+    <input type="text" class="in02" placeholder="in02">
+    <br>
+    <input type="text" class="in03" placeholder="in03">
+    <br>
+    <input type="text" class="in04" placeholder="in04">
+    <br>
+    <input type="text" class="in05" placeholder="in05">
+    <br>
+    <input type="text" class="in06" placeholder="in06">
+    <br>
+</body>
+</html>
