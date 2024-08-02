@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과 메서드</title>
+    <style>
+        .box{
+            width:500px;
+            height:500px;
+            background:red;
+        }
+        .btn{
+            font-size:2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>효과 메서드</h1>
+    <h2>hide/show/toggle</h2>
+    <div class="box box01"></div>
+    <button class="btn btn01">Hide</button>
+    <button class="btn btn02">Show</button>
+    <button class="btn btn03">Toggle</button>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $('.btn01').click(function(){
+            $('.box01').css('display','none');
+        });
+        $('.btn02').click(function(){
+            $('.box01').css('display','block');
+        });
+        $('.btn03').click(function(){
+            if($('.box01').css('display') == 'none'){
+                $('.box01').css('display','block');
+            }else{
+                $('.box01').css('display','none');
+            }                
+        });
+    </script>
+</body>
+</html>
