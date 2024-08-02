@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                console.log('스크롤중');
+            })
+        })
+    </script>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .wrap{            
+            overflow:hidden;
+        }
+        .header{
+            height:200px;
+            border-bottom:2px solid black;
+            background:lightseagreen;
+        }
+        .sec{
+            height:600px;
+            border-bottom:2px solid black;
+            padding:50px 0;
+            background:lightcoral;
+            display:grid;
+            grid-template-columns:auto auto;
+            gap:50px;
+            justify-content:center;
+        }
+        .box{
+            width:300px;
+            background:red;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            font-size:3em;
+        }
+        .box:last-child{
+            background:green;
+        }
+        .sec02{
+            background:lightgoldenrodyellow;
+        }
+        .sec03{
+            background:lightgreen;
+        }
+        .sec04{
+            background:lightpink;
+        }
+        .footer{
+            height:100px;
+            background:lime;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header"><a href="#sec03">sec03</a></header>
+        <section class="sec sec01">
+            <div class="box">box01-01</div>
+            <div class="box">box01-02</div>
+        </section>
+        <section class="sec sec02">
+            <div class="box">box02-01</div>
+            <div class="box">box02-02</div>
+        </section>
+        <section class="sec sec03" id="sec03">
+            <div class="box">box03-01</div>
+            <div class="box">box03-02</div>
+        </section>
+        <section class="sec sec04">
+            <div class="box">box04-01</div>
+            <div class="box">box04-02</div>
+        </section>
+        <footer class="footer"></footer>
+    </section>
+</body>
+</html>

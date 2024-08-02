@@ -13,6 +13,27 @@
             $('.btn01').click(function(){
                 $(this).hide();
             })
+            $('.btn02').dblclick(function(){
+                $(this).hide();
+            })
+            $('.btn03').hover(function(){
+                alert('hover');
+            })
+            $('.btn04').mousedown(function(){
+                $(this).hide();
+            })
+            $('.btn05').mouseup(function(){
+                $(this).hide();
+            })
+            $('.btn06').mouseenter(function(){
+                $(this).hide();
+            })
+            $('.btn07').mouseleave(function(){
+                $(this).hide();
+            })
+            $('.btn08').mousemove(function(){
+                $(this).hide();
+            })
         })
     </script>
 
@@ -27,6 +48,10 @@
         }
         button{            
             font-size:3em;
+        }
+
+        .active{
+            color:red;
         }
      </style>
 </head>
