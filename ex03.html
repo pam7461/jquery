@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매서드</title>
+</head>
+<body>
+    <h1 class="ul01">메서드</h1>
+    <h2>배열 관련 메서드</h2>
+    <h3>$.each(function(){})</h3>
+    <ul class="ul01">
+        <li>커피</li>
+        <li>밀크</li>
+        <li class="soda">소다</li>
+    </ul>
+    <ul class="ul02">
+        <li>coffee</li>
+        <li>milk</li>
+        <li class="soda">soda</li>
+    </ul>
+    <input type="checkbox" checked>
+    <input type="checkbox">
+    <input type="checkbox">
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $('li').each(function(){
+            console.log($(this).html());
+            console.log($(this).index());
+        });
+        
+        $('li').click(function(){
+            console.log($(this).html());
+            console.log($(this).index());
+        });
+
+        console.log($('li').eq(1).parent().is('div'));
+        $('input').each(function(){
+            console.log($(this).is(':checked'));
+        });
+        
+        
+    </script>
+</body>
+</html>
