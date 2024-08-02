@@ -6,11 +6,48 @@
     <title>스타벅스</title>
     <style>
         *{box-sizing:border-box;margin:0;padding:0;}
+        .box{position:relative;}
+        .img{
+            position: absolute;
+            left:20%;
+            top:20%;            
+            opacity:0;
+            animation: fade-in 0.4s 0.4s forwards;
+        }
+        .img01{
+            width:100%;            
+        }
+        .img02{
+
+        }
+        .img03{
+            left:40%;
+            animation-delay:0.8s;
+        }
+        .img04{
+            left:50%;
+            animation-delay:1.2s;
+        }
+        .img05{
+            left:60%;
+            animation-delay:1.6s;
+        }
+        .img06{
+            left:70%;
+            animation-delay:2s;
+        }
+
+
+
+        @keyframes fade-in {
+            0%{opacity:0;}
+            100%{opacity:1;}
+        }
     </style>
 </head>
 <body>
     <div class="box">
-        <img class="img img01" src="./images/img-back.png" alt="백그라운드 이미지">
+        <img class="img01" src="./images/img-back.png" alt="백그라운드 이미지">
         <img class="img img02" src="./images/img-25years.png" alt="25주년">
         <img class="img img03" src="./images/img-coco.png" alt="코코 프라프치노">
         <img class="img img04" src="./images/img-frappuccino.png" alt="프라프치노">
