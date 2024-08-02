@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.box01').addClass('active');
+            $(window).scroll(function(){
+                let winHeight = $(window).width();
+                let scrTop = $(window).scrollTop();
+                let offTop = $('.box02').offset().top;
+                if(scrTop + winHeight >= offTop + 20){
+                    $('.box02').addClass('active');
+                }else{
+                    $('.box02').removeClass('active');
+                }
+            });
+        })
+    </script>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .wrap{
+            overflow:hidden;
+        }
+        .box01{
+            height:100vh;
+            background:red;
+            transform:translateX(90%);
+            opacity:0.1;
+            transition: 0.3s;
+        }
+        .box01.active{
+            transform:translateX(0);
+            opacity:1;
+        }
+        .box02{
+            height:100vh;
+            background:green;
+            transform: translateX(-90%);
+            opacity:0.1;
+            transition:0.3s;
+        }
+        .box02.active{
+            transform:translateX(0);
+            opacity:1;
+        }
+        .box03{
+            height:100vh;
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box01"></div>
+        <div class="box box02"></div>
+        <div class="box box03"></div>
+    </div>
+</body>
+</html>

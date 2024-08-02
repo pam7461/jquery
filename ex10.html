@@ -11,36 +11,38 @@
 
             $(window).scroll(function(){
                 // sec03 높이 3종세트
-                let secH = $('.sec03').height();
-                let secIH = $('.sec03').innerHeight();
+                // let secH = $('.sec03').height();
+                // let secIH = $('.sec03').innerHeight();
                 let secOH = $('.sec03').outerHeight();                
                 let offTop = $('.sec03').offset().top;
-                let scrTop = $(window).scrolltop();
-                let winH = $(window).height();
+                let scrTop = $(window).scrollTop();
+                let winH = $(window).height();                
 
-
-                if(false){
-                    $('#sec03 div').eq(0).delay(1000).fadeIn(500);
-                    $('#sec03 div').eq(1).delay(1500).fadeIn(500);
+                if(scrTop + winH >= offTop + secOH / 2){
+                    $('#sec03 div').eq(0).fadeIn(500);
+                    $('#sec03 div').eq(1).delay(500).fadeIn(500);
+                }else{
+                    $('#sec03 div').eq(0).hide();
+                    $('#sec03 div').eq(1).hide();
                 }
             })
 
-            console.log(`======= 박스의 크기 3종 =======`);
-            console.log(`content-box height ${$('.sec01').height()}`);
-            console.log(`padding-box height ${$('.sec01').innerHeight()}`);
-            console.log(`border-box height ${$('.sec01').outerHeight()}`);
-            console.log(`content-box width ${$('.sec01').width()}`);
-            console.log(`padding-box width ${$('.sec01').innerWidth()}`);
-            console.log(`border-box width ${$('.sec01').outerWidth()}`);
+            // console.log(`======= 박스의 크기 3종 =======`);
+            // console.log(`content-box height ${$('.sec01').height()}`);
+            // console.log(`padding-box height ${$('.sec01').innerHeight()}`);
+            // console.log(`border-box height ${$('.sec01').outerHeight()}`);
+            // console.log(`content-box width ${$('.sec01').width()}`);
+            // console.log(`padding-box width ${$('.sec01').innerWidth()}`);
+            // console.log(`border-box width ${$('.sec01').outerWidth()}`);
 
-            console.log(`======= 박스의 상대좌표 =======`);
-            console.log(`header를 기준으로 한 a의 x좌표 = ${$('.header a').position().left}`);
-            console.log(`header를 기준으로 한 a의 y좌표 = ${$('.header a').position().top}`);
+            // console.log(`======= 박스의 상대좌표 =======`);
+            // console.log(`header를 기준으로 한 a의 x좌표 = ${$('.header a').position().left}`);
+            // console.log(`header를 기준으로 한 a의 y좌표 = ${$('.header a').position().top}`);
 
 
-            console.log(`======= 박스의 절대좌표 =======`);
-            console.log(`document를 기준으로 sec01 x좌표 = ${$('.sec01').offset().left}`);
-            console.log(`document를 기준으로 sec01 y좌표 = ${$('.sec01').offset().top}`);
+            // console.log(`======= 박스의 절대좌표 =======`);
+            // console.log(`document를 기준으로 sec01 x좌표 = ${$('.sec01').offset().left}`);
+            // console.log(`document를 기준으로 sec01 y좌표 = ${$('.sec01').offset().top}`);
 
         })
     </script>
