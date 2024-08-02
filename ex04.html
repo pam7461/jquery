@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 조작 메서드</title>
+</head>
+<body>
+    
+
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $('body').html('<h1></h1>');
+        $('h1').text('안녕하세요');
+        console.log($('body').html());
+        console.log($('body').text());
+        $('h1').attr('id','tit');
+        $('h1').attr('title','welcome');
+        $('h1').attr('class','tit');
+        $('h1').attr('id','logo');
+        console.log($('h1'));
+        console.log($('h1').attr('id'));
+        console.log($('h1').attr('class'));
+        console.log($('h1').attr('title'));
+        $('h1').removeAttr('id');
+        $('h1').removeAttr('class');
+        $('h1').removeAttr('title');
+
+        $('body').html('<input>');
+        $('input').attr('type','text');
+        $('input').attr('name','');
+        $('input').attr('id','');
+        // $('input').attr('value','10');
+        // $('input').attr('class','txt');
+        // $('input').attr('style','color:red');
+
+        $('input').val(10);
+        $('input').val(20);
+        console.log($('input').val());
+        $('input').css('color','blue');
+        console.log($('input').css('color'));
+        $('input').addClass('tit');
+        $('input').addClass('logo');
+        $('input').addClass('blue-box');
+        $('input').addClass('inputId');
+        $('input').removeClass('tit');
+        $('input').removeClass('inputId');
+        // console.log($('input').attr('class'));
+        $('input').toggleClass('tit');
+        // console.log($('input').attr('class'));
+        $('input').toggleClass('tit');
+        // console.log($('input').attr('class'));
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        $('input').toggleClass('tit');
+        console.log($('input').hasClass('tit'));
+    </script>
+</body>
+</html>
