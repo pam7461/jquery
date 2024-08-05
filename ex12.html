@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>        
+        $(function(){
+            $('body').css('background','red');
+            $('h1').parent().css('color','blue');
+
+            $('.btn01').click(function(){
+                $('h1').parent().css('color','#0f0');
+            });
+            $('.btn02').dblclick(function(){
+                $('h1').parent().css('color','#00f');
+            });
+            $('.btn03').mouseenter(function(){
+                $('h1').parent().css('color','#ff0');
+            });
+            $('.btn04').mouseleave(function(){
+                $('h1').parent().css('color','#f0f');
+            });
+            $('.btn06').mousedown(function(){
+                $('h1').parent().css('color','#0ff');
+            });
+            $('.btn07').mouseup(function(){
+                $('h1').parent().css('color','#999');
+            });
+
+            setInterval(function(){},1000);
+            // 크기 / 좌표
+            
+            console.log($('.btn02').offset().left);
+            console.log($('.btn02').offset().top);
+            console.log($('.btn02').outerWidth());
+            console.log($('.btn02').outerHeight());
+
+            // 스크롤거리
+            $(window).scroll(function(){
+                let winScrTop = $(window).scrollTop();
+                if(winScrTop>=300){
+                    $('div').css('transform','scale(0.5)');
+                }else{
+                    $('div').css('transform','scale(1)');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div><h1>제목</h1></div>
+    <button class="btn01">Click</button>   
+    <button class="btn02">Double Click</button>    
+    <button class="btn03">Over</button>   
+    <button class="btn04">Out</button>   
+    <button class="btn05">Scroll</button>   
+    <button class="btn06">Down</button>   
+    <button class="btn07">Up</button> 
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+    <div>box</div>
+</body>
+</html>

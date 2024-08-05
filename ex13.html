@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn01').click(function(){
+                $('.box01').hide(1000);
+            })
+            $('.btn02').click(function(){
+                $('.box01').show(1000);
+            })
+        })
+    </script>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box01">박스</div>
+    <button class="btn btn01">감추기</button>
+    <button class="btn btn02">보이기</button>
+</body>
+</html>
