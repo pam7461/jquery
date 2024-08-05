@@ -16,6 +16,39 @@
             $('.btn03').click(function(){
                 console.log(`h1의 ID => ${$('h1').attr('id')}`);
             })
+            $('.btn04').click(function(){
+                console.log(`h1의 Class => ${$('h1').attr('class')}`);
+            })
+            $('.btn05').click(function(){
+                $('h1').html('<a href="#">link</a>')
+            })
+            $('.btn06').click(function(){
+                $('h1 a').text('링크');
+            })
+            $('.btn07').click(function(){
+                $('h1').attr('id','title');
+            })
+            $('.btn08').click(function(){
+                $('h1').addClass('logo');
+            })
+            $('.btn09').click(function(){
+                $('h1').removeClass('h1');
+            })
+            $('.btn10').click(function(){
+                $('h1').toggleClass('h1');
+            })
+            $('.btn11').click(function(){
+                $('h1').removeClass();
+            })
+            $('.btn12').click(function(){
+                if($('h1').hasClass('logo')){
+                    // true                    
+                    $('h1 a').css('color','red');
+                }else{
+                    // false
+                    $('h1 a').css('color','green');
+                }
+            })
 
         })
     </script>
@@ -23,12 +56,16 @@
 <body>
     <h1 class="h1 tit" id="logo"><a href="#" target="_blank" rel="noopener noreferrer">로고</a></h1>
     <button class="btn btn01">get HTML</button>
-    <button class="btn btn02">get text</button>
-    <button class="btn btn03">get attr</button>
-    <button class="btn btn04">get class</button>
-    <button class="btn btn05"></button>
-    <button class="btn btn06"></button>
-    <button class="btn btn07"></button>
-    <button class="btn btn08"></button>
+    <button class="btn btn02">get Text</button>
+    <button class="btn btn03">get Attr</button>
+    <button class="btn btn04">get Class</button>
+    <button class="btn btn05">set HTML</button>
+    <button class="btn btn06">set Text</button>
+    <button class="btn btn07">set Attr</button>
+    <button class="btn btn08">add Class</button>
+    <button class="btn btn09">remove Class</button>
+    <button class="btn btn10">toggle Class</button>
+    <button class="btn btn11">remove Class All</button>
+    <button class="btn btn12">has Class</button>
 </body>
 </html>
