@@ -46,7 +46,20 @@
                 event.preventDefault();
             })
 
+            // html5 로드
+            $('#btn-html').click(function(){
+                $('.container').load('./data/html5.txt');
+            })
 
+            // css3 로드
+            $('#btn-css').click(function(){
+                $('.container').load('./data/css3.txt');
+            })
+
+            // js 로드
+            $('#btn-js').click(function(){
+                $('.container').load('./data/js.txt');
+            })
 
         })
     </script>
