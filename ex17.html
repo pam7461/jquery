@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                $('h1').css('color','red').css('font-size','50px').css('font-family','궁서').addClass('logo');                
+                $('h1').css({
+                    'color':'green',
+                    'font-size':'100px',
+                    'font-family':'나눔고딕',
+                }).removeClass('logo');
+                $('h1').css({
+                    color:'blue',
+                    fontSize:'20px',
+                    fontFamily:'궁서',
+                }).addClass('logo');
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>제목</h1>
+    <button>Click</button>
+</body>
+</html>
