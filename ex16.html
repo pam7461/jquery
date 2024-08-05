@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET/SET</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn01').click(function(){
+                console.log(`h1의 이너 HTML => ${$('h1').html()}`);
+            })
+            $('.btn02').click(function(){
+                console.log(`h1의 이너 text => ${$('h1').text()}`);
+            })
+            $('.btn03').click(function(){
+                console.log(`h1의 ID => ${$('h1').attr('id')}`);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <h1 class="h1 tit" id="logo"><a href="#" target="_blank" rel="noopener noreferrer">로고</a></h1>
+    <button class="btn btn01">get HTML</button>
+    <button class="btn btn02">get text</button>
+    <button class="btn btn03">get attr</button>
+    <button class="btn btn04">get class</button>
+    <button class="btn btn05"></button>
+    <button class="btn btn06"></button>
+    <button class="btn btn07"></button>
+    <button class="btn btn08"></button>
+</body>
+</html>
