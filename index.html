@@ -9,8 +9,41 @@
         // jQuery
         $(function(){
             $('button').click(function(){
-                
+                let btnTxt = $(this).text();
+                if(btnTxt == 'Dark'){
+                    $(this).text('Light');
+                    $('h1 a').css({
+                        color:'#ff8',
+                    });
+                    $('li a').css({
+                        color:'#f83',
+                    });
+                    $('h2,p').css({
+                        color:'#fff',
+                    });
+                    $('body').css({
+                        background:'#666',
+                    })
+                }else{
+                    $(this).text('Dark');
+                    $('h1 a').css({
+                        color:'#008',
+                    });
+                    $('li a').css({
+                        color:'#083',
+                    });
+                    $('h2,p').css({
+                        color:'#000',
+                    });
+                    $('body').css({
+                        background:'#fff',
+                    })
+                }
             })
+
+            
+
+
         })
     </script>
     <style>        
