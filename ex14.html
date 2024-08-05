@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            console.log(fn01());
+            console.log(fn02() + fn03());
+
+            function fn01(){
+                return '안녕하세요. 이 메세지는 바로 실행되는 콜백의 결과 입니다';
+            }
+
+            function fn02(){
+                return 1;
+            }
+            function fn03(){
+                return 10;
+            }
+
+            $('.btn').click(function(){
+                $('.box').stop().slideUp(2000,boxHeight);                
+            })
+
+            function boxHeight(){
+                console.log($('.box').outerHeight());
+            }
+
+        })
+    </script>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Call-Back Function(콜백함수)</h1>
+    <p>다른 코드에 인수로서 전달되는 함수</p>
+    <p>콜백을 넘겨받은 코드는 콜백을 바로 실행할수 도 있고, 나중에 실행할 수도 있다.</p>
+    <div class="box"></div>
+    <button class="btn">Click</button>
+</body>
+</html>

@@ -13,6 +13,37 @@
             $('.btn02').click(function(){
                 $('.box01').show(1000);
             })
+            $('.btn03').click(function(){
+                $('.box02').slideUp(1000);
+            })
+            $('.btn04').click(function(){
+                $('.box02').slideDown(1000);
+            })
+            $('.btn05').click(function(){
+                $('.box03').fadeOut(1000);
+            })
+            $('.btn06').click(function(){
+                $('.box03').fadeIn(1000);
+            })
+
+
+            // jQuery Animation
+            $('.btn07').click(function(){
+                $('.box04').animate({                    
+                    height:0,
+                },1000);
+            })
+            $('.btn08').click(function(){
+                $('.box04').animate({
+                    height:'200px',
+                },1000);
+            })
+
+            $('.toggle').click(function(){
+                $('.toggle-box').stop().slideToggle(2000);
+                console.log($('.toggle-box').outerHeight());
+            })
+                
         })
     </script>
     <style>
@@ -27,5 +58,20 @@
     <div class="box box01">박스</div>
     <button class="btn btn01">감추기</button>
     <button class="btn btn02">보이기</button>
+    <br>
+    <div class="box box02">박스</div>
+    <button class="btn btn03">감추기</button>
+    <button class="btn btn04">보이기</button>
+    <br>
+    <div class="box box03">박스</div>
+    <button class="btn btn05">감추기</button>
+    <button class="btn btn06">보이기</button>
+    <br>
+    <div class="box box04">박스</div>
+    <button class="btn btn07">감추기</button>
+    <button class="btn btn08">보이기</button>
+    <br>
+    <div class="box toggle-box"></div>
+    <button class="btn toggle">click</button>
 </body>
 </html>
